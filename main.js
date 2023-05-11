@@ -1,109 +1,109 @@
-// const delay = ms => new Promise(ok => setTimeout(() => ok(ms), ms))
+const delay = ms => new Promise(ok => setTimeout(() => ok(ms), ms))
 
-// async function trafficLight(){
-//     while (true){
-//         // включаємо зелений
-//         green.style.backgroundColor = 'green';
-//         await delay(3000)
-//         green.style.backgroundColor = '';
-//         // включаємо жовтий
-//         yellow.style.backgroundColor = 'yellow';
-//         await delay(3000)
-//         yellow.style.backgroundColor = '';
-//         // включаємо червоний
-//         red.style.backgroundColor = 'red';
-//         await delay(3000)
-//         red.style.backgroundColor = '';
-//     }
-// }
+async function trafficLight(){
+    while (true){
+        // включаємо зелений
+        green.style.backgroundColor = 'green';
+        await delay(3000)
+        green.style.backgroundColor = '';
+        // включаємо жовтий
+        yellow.style.backgroundColor = 'yellow';
+        await delay(3000)
+        yellow.style.backgroundColor = '';
+        // включаємо червоний
+        red.style.backgroundColor = 'red';
+        await delay(3000)
+        red.style.backgroundColor = '';
+    }
+}
 
-// trafficLight()
+trafficLight()
 
 // ====================
 
-// const delay = ms => new Promise(ok => setTimeout(() => ok(ms), ms))
+const delay = ms => new Promise(ok => setTimeout(() => ok(ms), ms))
 
-// async function trafficLight(greenEl,yellowEl,redEl,greenTime,yellowTime,redTime){
-//   while (true){
-//       // включаємо зелений
-//       greenEl.style.backgroundColor = 'green';
-//       await delay(greenTime)
-//       greenEl.style.backgroundColor = '';
-//       // включаємо жовтий
-//       yellowEl.style.backgroundColor = 'yellow';
-//       await delay(yellowTime)
-//       yellowEl.style.backgroundColor = '';
-//       // включаємо червоний
-//       redEl.style.backgroundColor = 'red';
-//       await delay(redTime)
-//       redEl.style.backgroundColor = '';
+async function trafficLight(greenEl,yellowEl,redEl,greenTime,yellowTime,redTime){
+  while (true){
+      // включаємо зелений
+      greenEl.style.backgroundColor = 'green';
+      await delay(greenTime)
+      greenEl.style.backgroundColor = '';
+      // включаємо жовтий
+      yellowEl.style.backgroundColor = 'yellow';
+      await delay(yellowTime)
+      yellowEl.style.backgroundColor = '';
+      // включаємо червоний
+      redEl.style.backgroundColor = 'red';
+      await delay(redTime)
+      redEl.style.backgroundColor = '';
 
-//   }
-// }
-// const green= document.getElementById('green')
-// const yellow= document.getElementById('yellow')
-// const red= document.getElementById('red')
+  }
+}
+const green= document.getElementById('green')
+const yellow= document.getElementById('yellow')
+const red= document.getElementById('red')
 
-// trafficLight( green,yellow,red,3000,2000,5000)
+trafficLight( green,yellow,red,3000,2000,5000)
 // =============================================
 
-// const delay = (ms) => new Promise((ok) => setTimeout(() => ok(ms), ms));
+const delay = (ms) => new Promise((ok) => setTimeout(() => ok(ms), ms));
 
-// async function trafficLight(
+async function trafficLight(
 
-//   redEl,
-//   yellowEl,
-//   greenEl,
-//   redTime,
-//   yellowTime,
-//   greenTime,
+  redEl,
+  yellowEl,
+  greenEl,
+  redTime,
+  yellowTime,
+  greenTime,
 
-// ) {
+) {
 
-//   redEl.style.backgroundColor = "red";
-//   await delay(redTime);
-//   redEl.style.backgroundColor = "";
+  redEl.style.backgroundColor = "red";
+  await delay(redTime);
+  redEl.style.backgroundColor = "";
 
-//   yellowEl.style.backgroundColor = "yellow";
-//   await delay(yellowTime);
-//   yellowEl.style.backgroundColor = "";
+  yellowEl.style.backgroundColor = "yellow";
+  await delay(yellowTime);
+  yellowEl.style.backgroundColor = "";
 
-//   greenEl.style.backgroundColor = "green";
-//   await delay(greenTime);
-//   greenEl.style.backgroundColor = "";
+  greenEl.style.backgroundColor = "green";
+  await delay(greenTime);
+  greenEl.style.backgroundColor = "";
 
-// }
+}
 
-// const green = document.getElementById("green");
-// const yellow = document.getElementById("yellow");
-// const red = document.getElementById("red");
+const green = document.getElementById("green");
+const yellow = document.getElementById("yellow");
+const red = document.getElementById("red");
 
-// const greenTime = 3000;
-// const yellowTime = 2000;
-// const redTime = 5000;
+const greenTime = 3000;
+const yellowTime = 2000;
+const redTime = 5000;
 
-// async function PedestrianTrafficLight(button, timeToAwait) {
-//   button.addEventListener("click", async (event) => {
-//     button.style.backgroundColor = "pink";
-//     button.style.color = "green";
-//     button.innerText = "кнопка нажата";
+async function PedestrianTrafficLight(button, timeToAwait) {
+  button.addEventListener("click", async (event) => {
+    button.style.backgroundColor = "pink";
+    button.style.color = "green";
+    button.innerText = "кнопка нажата";
 
-//     event.preventDefault();
-//     await delay(timeToAwait);
+    event.preventDefault();
+    await delay(timeToAwait);
 
-//     await trafficLight(red, yellow, green, redTime, yellowTime, greenTime);
-//     button.style = "";
-//     button.innerText = "Пешеход, жми сюда";
-//   });
-//   element.removeEventListener(click, trafficLight);
-// }
+    await trafficLight(red, yellow, green, redTime, yellowTime, greenTime);
+    button.style = "";
+    button.innerText = "Пешеход, жми сюда";
+  });
+  element.removeEventListener(click, trafficLight);
+}
 
-// const button = document.getElementById("traffic");
+const button = document.getElementById("traffic");
 
-// PedestrianTrafficLight(button, 3000);
+PedestrianTrafficLight(button, 3000);
 // =====================
 
-// speedtest  формулы написаны ГОЛИМО
+// speedtest  
 
 async function speedtest(getPromise, count, parallel = 1) {
   let start = performance.now();
